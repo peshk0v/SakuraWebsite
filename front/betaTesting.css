@@ -1,0 +1,85 @@
+.contentBT h1{
+    color: #ff69b4;
+}
+
+.contentBT {
+    margin: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 2rem;
+}
+
+.contentBT p {
+    font-size: 1.2rem;
+    margin: 1.5rem 0;
+    max-width: 600px;
+    line-height: 1.6;
+}
+
+.header-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.header-container .logo{
+    color: #ff69b4;
+    transition: 1s;
+}
+
+.header-container .logo:hover{
+    color: #ffb6da;
+    cursor: pointer;
+}
+
+.beta-button {
+    background: linear-gradient(45deg, #ff69b4, #ff89c4);
+    border: none;
+    border-radius: 30px;
+    padding: 15px 40px;
+    color: white;
+    font-family: "JetBrains Mono", monospace;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.beta-button:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 0 25px rgba(255, 105, 180, 0.5);
+    background: linear-gradient(45deg, #ff89c4, #ff69b4);
+}
+
+.beta-button:active {
+    transform: translateY(1px);
+    box-shadow: 0 0 10px rgba(255, 105, 180, 0.4);
+}
+
+.beta-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255, 255, 255, 0.3),
+        transparent
+    );
+    transition: 0.5s;
+}
+
+.beta-button:hover::before {
+    left: 100%;
+}

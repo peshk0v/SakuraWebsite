@@ -1,0 +1,355 @@
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap');
+
+/* Анимации */
+@keyframes slideInFromTop {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromLeft {
+    0% {
+        transform: translateX(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideInFromRight {
+    0% {
+        transform: translateX(50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+@keyframes scaleIn {
+    0% {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes glowPulse {
+    0% {
+        box-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 15px rgba(255, 105, 180, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 5px rgba(255, 105, 180, 0.3);
+    }
+}
+
+html, body {
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #000;
+    color: #fff;
+    font-family: "JetBrains Mono", monospace;
+    font-optical-sizing: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Стили загрузки */
+.loading {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    color: #ff69b4;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+}
+
+.loading::after {
+    content: '';
+    width: 20px;
+    height: 20px;
+    margin-left: 15px;
+    border: 2px solid #ff69b4;
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: loading-spinner 1s linear infinite;
+}
+
+@keyframes loading-spinner {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.loading.hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.main-header {
+    background: linear-gradient(to right, rgba(41, 0, 23, 0.95), rgba(41, 0, 23, 0.85));
+    backdrop-filter: blur(8px);
+    border-bottom: 2px solid #ff69b4;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ff69b4;
+    text-shadow: 0 0 10px rgba(255, 105, 180, 0.5);
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    font-size: 1rem;
+    position: relative;
+}
+
+.main-nav a:hover {
+    color: #ff69b4;
+    cursor: pointer;
+}
+
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -4px;
+    left: 0;
+    background-color: #ff69b4;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+.content {
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    padding: 2rem;
+    box-sizing: border-box;
+    height: calc(100vh - 70px); /* Вычитаем высоту header */
+}
+
+.news-section {
+    flex: 1;
+    max-width: 50%;
+    height: 95%;
+    overflow: hidden;
+    position: relative;
+    background: rgba(41, 0, 23, 0.3);
+    border: 1px solid #ff69b4;
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+}
+
+.news-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-right: 1rem;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    padding: 1.5rem;
+}
+
+.html-section {
+    flex: 1;
+    max-width: 50%;
+    height: 95%;
+    background: rgba(41, 0, 23, 0.3);
+    border: 1px solid #ff69b4;
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+    overflow-y: auto;
+}
+
+.news-item {
+    background: rgba(41, 0, 23, 0.3);
+    border: 1px solid #ff69b4;
+    border-radius: 10px;
+    padding: 1.5rem;
+    backdrop-filter: blur(8px);
+    transition: transform 0.3s ease;
+    width: 89%;
+}
+
+.news-item:hover {
+    transform: translateY(-5px);
+}
+
+.news-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.news-title {
+    color: #ff69b4;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+.news-date {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.9rem;
+}
+
+.news-text {
+    color: #fff;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.news-image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 5px;
+    display: none;
+}
+
+.news-image.has-image {
+    display: block;
+}
+
+.tab-content {
+    display: none;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-out;
+}
+
+.tab-content.active {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    opacity: 1;
+}
+
+/* Стилизация скроллбара */
+.news-container::-webkit-scrollbar {
+    width: 8px;
+}
+
+.news-container::-webkit-scrollbar-track {
+    background: rgba(41, 0, 23, 0.3);
+    border-radius: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb {
+    background: #ff69b4;
+    border-radius: 4px;
+}
+
+.news-container::-webkit-scrollbar-thumb:hover {
+    background: #ff89c4;
+}
+
+#homePage {
+    justify-content: center;
+    align-items: center;
+    height: 90%;
+}
+
+#homePage h1 {
+    font-size: 2.5rem;
+    color: #ff69b4;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+#homePage p {
+    font-size: 1.2rem;
+    text-align: center;
+    max-width: 80%;
+    line-height: 1.6;
+}
+
+.tab-content a {
+    color: #ff69b4;
+    text-decoration: none;
+}

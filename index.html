@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SakuraLauncher</title>
+    <link rel="stylesheet" href="front/style.css">
+    <link rel="icon" href="public/favIcon.png" type="image/x-icon">
+    <script src="back/news.js"></script>
+    <script src="back/header.js"></script>
+    <script src="back/pages.js"></script>
+    <script src="back/loading.js"></script>
+</head>
+<body>
+    <div class="loading">Сайт загружается...</div>
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">SakuraLauncher</div>
+            <nav class="main-nav">
+                <ul>
+                    <li><a id="home">Главная</a></li>
+                    <li><a id="download">Скачать</a></li>
+                    <li><a id="contact">О нас</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="content">
+        <div class="news-section"></div>
+        <div class="html-section">
+            <div class="tab-content active" id="homePage">
+                <h1>Добро пожаловать в SakuraLauncher!</h1>
+                <p>Мы рады приветствовать вас на нашем проекте.</p>
+            </div>
+            <div class="tab-content" id="downloadPage">
+                <h1>Скачать SakuraLauncher</h1>
+                <p>К сожалению, скачивание SakuraLauncher пока не доступно, так как мы ещё не закончили разработку.</p>
+                <p>Но если вы хотите помочь разработке, вы можете вступить в команду <a href="betaTesting.html">бета-тестирования</a>.</p>
+            </div>
+            <div class="tab-content" id="contactPage">
+                ТГК НЕТУ!!!
+            </div>
+        </div>
+    </div>
+
+    <script>
+        setDefaultPage();
+    </script>
+</body>
+</html>
