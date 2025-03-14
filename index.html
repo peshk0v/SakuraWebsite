@@ -29,8 +29,53 @@
         <div class="news-section"></div>
         <div class="html-section">
             <div class="tab-content active" id="homePage">
-                <h1>Добро пожаловать в SakuraLauncher!</h1>
-                <p>Мы рады приветствовать вас на нашем проекте.</p>
+                <div class="home-sections">
+                    <section class="home-section active" id="welcome-section">
+                        <h1>Добро пожаловать в SakuraLauncher!</h1>
+                        <p>Мы рады приветствовать вас на нашем проекте.</p>
+                    </section>
+
+                    <section class="home-section" id="features-section">
+                        <h2>Особенности проекта</h2>
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ff69b4" class="bi bi-lightning-charge-fill" viewBox="0 0 16 16">
+                                    <path d="M11.251.068a.5.5 0 0 1 .227.58L9.677 6.5H13a.5.5 0 0 1 .364.843l-8 8.5a.5.5 0 0 1-.842-.49L6.323 9.5H3a.5.5 0 0 1-.364-.843l8-8.5a.5.5 0 0 1 .615-.09z"/>
+                                </svg>
+                                <h3>Сборки</h3>
+                                <p>Мы разработали новую систему для создания и использования сборок!</p>
+                            </div>
+                            <div class="feature-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 50 50" fill="#ff69b4">
+                                    <path d="M 17.226563 46.582031 C 17.105469 46.582031 16.984375 46.5625 16.871094 46.519531 C 7.976563 43.15625 2 34.507813 2 25 C 2 12.316406 12.316406 2 25 2 C 37.683594 2 48 12.316406 48 25 C 48 34.507813 42.023438 43.15625 33.128906 46.519531 C 32.882813 46.613281 32.605469 46.605469 32.363281 46.492188 C 32.121094 46.386719 31.933594 46.183594 31.839844 45.9375 L 26.890625 32.828125 C 26.695313 32.3125 26.953125 31.734375 27.472656 31.539063 C 30.179688 30.519531 32 27.890625 32 25 C 32 21.140625 28.859375 18 25 18 C 21.140625 18 18 21.140625 18 25 C 18 27.890625 19.820313 30.519531 22.527344 31.539063 C 23.046875 31.734375 23.304688 32.3125 23.109375 32.828125 L 18.160156 45.933594 C 18.066406 46.183594 17.878906 46.382813 17.636719 46.492188 C 17.507813 46.554688 17.367188 46.582031 17.226563 46.582031 Z"></path>
+                                </svg>
+                                <h3>OpenSource</h3>
+                                <p>Наш проект является OpenSource, вы можете просматривать исходный код на GitHub</p>
+                            </div>
+                            <div class="feature-card">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="#ff69b4" class="bi bi-stars" viewBox="0 0 16 16">
+                                    <path d="M7.657 6.247c.11-.33.576-.33.686 0l.645 1.937a2.89 2.89 0 0 0 1.829 1.828l1.936.645c.33.11.33.576 0 .686l-1.937.645a2.89 2.89 0 0 0-1.828 1.829l-.645 1.936a.361.361 0 0 1-.686 0l-.645-1.937a2.89 2.89 0 0 0-1.828-1.828l-1.937-.645a.361.361 0 0 1 0-.686l1.937-.645a2.89 2.89 0 0 0 1.828-1.828l.645-1.937zM3.794 1.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387A1.734 1.734 0 0 0 4.593 5.69l-.387 1.162a.217.217 0 0 1-.412 0L3.407 5.69A1.734 1.734 0 0 0 2.31 4.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387A1.734 1.734 0 0 0 3.407 2.31l.387-1.162zM10.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.156 1.156 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.156 1.156 0 0 0-.732-.732L9.1 2.137a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732L10.863.1z"/>
+                                </svg>
+                                <h3>Уникальный дизайн</h3>
+                                <p>Стильный интерфейс</p>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="home-section" id="about-section">
+                        <h2>Что такое SakuraLauncher?</h2>
+                        <div class="about-content">
+                            <p>SakuraLauncher — это не просто Minecraft Launcher, это целый мультитул для игроков! Мы стремимся создать уникальный опыт использования, сочетающий в себе функциональность и эстетику.</p>
+                        </div>
+                    </section>
+                </div>
+                
+                <div class="section-navigation">
+                    <div class="nav-dot active" data-section="welcome-section"></div>
+                    <div class="nav-dot" data-section="features-section"></div>
+                    <div class="nav-dot" data-section="about-section"></div>
+                </div>
+
             </div>
             <div class="tab-content" id="downloadPage">
                 <h1>Скачать SakuraLauncher</h1>
@@ -38,7 +83,30 @@
                 <p>Но если вы хотите помочь разработке, вы можете вступить в команду <a href="betaTesting.html">бета-тестирования</a>.</p>
             </div>
             <div class="tab-content" id="contactPage">
-                ТГК НЕТУ!!!
+                <h1>О проекте SakuraLauncher</h1>
+                <div class="contact-content">
+                    <p class="project-description">
+                        SakuraLauncher — это инновационный проект. 
+                        Наша цель — создать уникальный лаунчер, который объединит в себе функциональность, удобство использования 
+                        и эстетику.
+                    </p>
+                    
+                    <div class="contact-section">
+                        <h2>Больше информации</h2>
+                        <p>
+                            Мы всегда открыты для общения, предложений и идей. 
+                            Присоединяйтесь к нашему сообществу в Telegram:
+                        </p>
+                        <a href="https://t.me/SakuraLauncher" class="contact-button">
+                            <span class="button-text">Наш Telegram канал</span>
+                            <span class="button-icon">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-arrow-right-short" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 0-.708-.708l3 3a.5.5 0 0 0 0 .708l-3 3a.5.5 0 0 0-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                                </svg>
+                            </span>
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
